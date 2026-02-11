@@ -6,7 +6,7 @@
    <link rel="icon" type="image/png" href="1.JPG">
   <title>unclick+</title>
 
-  <style>
+<style>
     * {
       box-sizing: border-box;
     }
@@ -16,50 +16,61 @@
       min-height: 100vh;
       background: #41302e;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "helvetica";
-      font-style: normal;
+      align-items: center; 
+      justify-content: center; 
+      font-family: "Helvetica", Arial, sans-serif;
       color: #fffae6;
       cursor: pointer;
       padding: 20px;
     }
 
     .container {
+      /* Quitamos el aspect-ratio y el width fijo */
+      width: 90%;          /* En móviles ocupa casi todo el ancho */
+      max-width: 500px;    /* Límite de ancho para que el texto largo no se vea infinito */
+      height: auto;        /* La altura se adapta al contenido */
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      width: 100%;
-      max-width: 500px;
-      padding: 24px;
-      border-radius: 20px;
+      
+      padding: 40px 30px;  /* Más espacio arriba y abajo para los mensajes largos */
+      background: rgba(255, 255, 255, 0.05); 
       backdrop-filter: blur(10px);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 254, 230, 0.1);
+      
+      /* Animación para que la caja crezca/se achique suavemente */
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     img {
-      width: 85%;
-      max-height: 300px;
-      object-fit: cover;
+      width: 100%;         /* Se ajusta al ancho del container */
+      height: auto;        /* RESPETA la proporción original (Vertical u Horizontal) */
+      max-height: 65vh;    /* Evita que las fotos verticales se salgan de la pantalla */
+      object-fit: contain; /* Asegura que se vea toda la imagen */
       border-radius: 16px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      display: block;
     }
 
     h1 {
-      font-size: 1.4rem;
-      line-height: 1.4;
+      font-size: 1.2rem;
+      line-height: 1.6;
       margin: 0;
-    }
-
-    p {
-      margin-top: 10px;
-      opacity: 0.6;
-      font-size: 0.8rem;
-    }
-  </style>
+      font-weight: normal;
+</style>
 </head>
 
 <body onclick="changeVibe()">
   <div class="container">
   <img id="vibeImage" src="1.jpeg" alt="vibe image" />
-  <h1 id="phrase"> Un regalito para mi Grano de Café </h1>
+  <h1 id="phrase"> ✿ UN REGALITO, PARA MI PALETA DE CAFÉ ✿
+                  aquí puede encontrar de todo un poco, recuerdos, mensajitos y
+                   fotos mías que CREO que nunca has visto </h1>
+
 </div>
 
 
@@ -75,19 +86,137 @@
     "Empieza la mañana, y no puedo esperar para empezarlas junto a ti, y poder comer tu rica banana <3<3",
     "Si ves esto, TIENES SUERTE ☝️🤓, me puedes pedir una foto (no hot)",
     "Amorcito, enseriooooo, siento que gasté toda mi suerte en tí y no me molesta, yo lo amo mucho, gracias por todo, gracias por darme like 🤵👰",
+    "Amorcito, NOS FALTAN FOTOS JUNTOS",
+    "Podemos porfavorrrrrrrrrrrrrrrrrrrrrrrrrrrrr sacarnos más fotos juntos",
+    "Le he dicho que lo amo? porque usted a mi nunca :(",
+    "aMOrcito creo que lo amo más que la canela, es una paradoja pq usted es canela",
+    "Se debería tirar alun peo alfrente mío, así desbloqueamos los chistes con peos, amor le falta visión",
+    "Debo admitirle algo amor, soy un hombre......................... ya pero que harías si fuera verdad, me seguirias amando? ",
+    "my nigga my niggaaaaaaaaaaaaa, my nigga, my niiggaaaaaaaaaaaaa, my shaylaaaaaaaaaaaaaaaaaa",
+    "AMOR y si y si y si y si, nos amamos para siempre? si quieres nomas...",
+    "Seamos loquitos del centro, PORFAVOR ",
+    "aMorcito gracias por ser amable y paciente conmigo, le prometo que estamos trabAjando ( yo y mis 10.000 voces) para ser la mejor polola de la GALAXIA ",
+    "sabias que los mapaches tienen más pelo que tú? a que no lo sabias",
+    "si fuera un trasnformer me seguiria amando?",
+    "Quiero viajar a todo el mundo con ute",
+    "cuanto es 6 7 + 2? 😇",
+    "OIGA, YAPUE, QUE ESTA HACIENDO QUE NO ME BESA",
+    "benjaminnnnnnnnnnnnnn yo lo admiro un montón, eres mi modelo a seguir, porque tienes tremendo culo, ahí debe ser donde esta su cerebro, porque es super inteligente",
+    "amor estoy super orgullosa de usted, ojalá seguir viendo como crece, y su corneta támbien INAAAAAAAAAAAAAAAAAAAAAAAAA"
+    
+    
+    
+    
+    
+    
+	
 
 	
   ];
 
   const images = [
     "1.JPG",
-    "2.jpeg",
-    "3.jpeg",
-    "4.jpeg",
-    "5.jpeg",
-    "6.jpg",
+    "2.JPG",
+    "3.JPG",
+    "4.JPG",
+    "5.JPG",
+    "6.JPG",
     "7.JPG",
-    "8.jpeg"
+    "8.JPG",
+    "9.JPG",
+    "10.JPG",
+    "11.JPG",
+    "12.JPG",
+    "13.JPG",
+    "14.JPG",
+    "15.JPG",
+    "16.JPG",
+    "17.JPG",
+    "18.JPG",
+    "19.JPG",
+    "20.JPG",
+    "21.JPG",
+    "22.JPG",
+    "23.JPG",
+    "24.JPG",
+    "25.JPG",
+    "26.JPG",
+    "27.JPG",
+    "28.JPG",
+    "29.JPG",
+    "30.JPG",
+    "31.JPG",
+    "32.JPG",
+    "33.JPG",
+    "34.JPG",
+    "35.JPG",
+    "36.JPG",
+    "37.JPG",
+    "38.JPG",
+    "39.JPG",
+    "40.JPG",
+    "41.JPG",
+    "42.JPG",
+    "43.JPG",
+    "44.JPG",
+    "45.JPG",
+    "46.JPG",
+    "47.JPG",
+    "48.JPG",
+    "49.JPG",
+    "50.JPG",
+    "51.JPG",
+    "52.JPG",
+    "53.JPG",
+    "54.JPG",
+    "55.JPG",
+    "56.JPG",
+    "57.JPG",
+    "58.JPG",
+    "59.JPG",
+    "60.JPG",
+    "61.JPG",
+    "62.JPG",
+    "63.JPG",
+    "64.JPG",
+    "65.JPG",
+    "66.JPG",
+    "67.JPG",
+    "68.JPG",
+    "69.JPG",
+    "70.JPG",
+    "71.JPG",
+    "72.JPG",
+    "73.JPG",
+    "74.JPG",
+    "75.JPG",
+    "76.JPG",
+    "77.JPG",
+    "78.JPG",
+    "79.JPG",
+    "80.JPG",
+    "81.JPG",
+    "82.JPG",
+    "83.JPG",
+    "84.JPG",
+    "85.JPG",
+    "86.JPG",
+    "87.JPG",
+    "88.JPG",
+    "89.JPG",
+    "90.JPG",
+    "91.JPG",
+    "92.JPG",
+    "93.JPG",
+    "94.JPG",
+    "95.JPG",
+    "96.JPG",
+    "97.JPG",
+    
+
+
+
+
 
   ];
 
